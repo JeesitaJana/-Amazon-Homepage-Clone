@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------- HEADER WRAPPER ---------- */
+.nav-bot {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* ---------- TOP NAVBAR ---------- */
+.navbar {
+    height: 60px;
+    background-color: #131921;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 12px;
+}
+
+/* Logo */
+.navbar-logo {
+    background-image: url("Capture.PNG"); /* your logo */
+    height: 50px;
+    width: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Address */
+.navbar-address {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.address-second {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Search */
+.search-box {
+    flex: 1;                    /* 🔥 IMPORTANT */
+    display: flex;
+    align-items: center;
+}
+
+.nav-select {
+    height: 40px;
+}
+
+.nav-search {
+    flex: 1;
+    height: 40px;
+    padding: 0 8px;
+}
+
+.search-icon {
+    height: 40px;
+    width: 45px;
+    background-color: #febd69;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+/* Right items */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.account,
+.language {
+    background: #131921;
+    color: white;
+    border: none;
+}
+
+/* ---------- SECOND BAR ---------- */
+.bar {
+    height: 40px;
+    background-color: #232f3e;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 16px;
+}
+
+.bar-all {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.panel {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* ---------- HERO IMAGE ---------- */
+.picture {
+    height: 350px;
+    background-image: url("../cap.PNG");
+    background-size: cover;
+    background-position: center;
+}
+
+.product-box {
+    height: 400px;
+    width: 300px;
+    border: 2px solid black;
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -120px;
+    background-color: #E6E6E6;
+    position: relative;
+}
+
+.pic {
+    height: 100px;
+    width: 100px;
+
+}
+
+.elements {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.below {
+    display: flex;
+    flex-direction: column;
+}
+
+.pic1 {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    flex-direction: row;
+
+}
+
+.element3 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10%;
+}
+
+.box {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+}
+
+.head {
+    font-size: 150%;
+    margin-left: 10%;
+}

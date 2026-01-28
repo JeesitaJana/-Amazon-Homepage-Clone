@@ -1,0 +1,337 @@
+content delivery network -- cdn
+
+border-box means jitni bhi padding usko mile woh size usk height and width ke andar.
+
+rem means font size ke root ke respect mein kitna.
+agar do chiz ek hi div ke andar hai aur use mujhe ek hi line mein use krna hai toh main use karungi FLEX ko.
+align-items meand cross axis(y-axis) ke center mein aa jaaye.
+
+.boxes is display: flex
+
+Default behavior: flex-wrap: nowrap
+
+But when items cannot physically fit, the browser overflows and visually drops the last one
+
+This is expected behavior
+
+Use flex: 1 (best practice)
+
+
+
+html code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Amazon </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <header>
+        <div class = "nav-bot">
+            <div class = "navbar">
+                <div class = "navbar-logo border"></div>
+                <div class = "nav-box">
+                    <div class = " navbar-address ">
+                        <span class = "address-first"> Deliver to</span>
+                
+                    <div class = "add-icon border">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p class = "address-second"> India </p>
+                    </div>
+                </div>
+
+                <div class = "search-box">
+                    <select name = "All" class = "nav-select">
+                        <option value = "All" > All </option>
+                        <option value = "Alexa Skills">Alexa Skills</option>
+                        <option value = "Fashion"> Fashion </option>
+                        <option value = "Pharmacy"> Pharmacy </option>
+                        <option value = "Devices"> Devices </option>
+                        <option value = "Books"> Books </option>
+                        <option value = "Beauty"> Beauty </option>
+                    </select>
+                    <input placeholder = "Search Amazon" class = "nav-search" name = "Search Amazon">
+                    <div class = "search-icon">
+                     <i class = "fa-solid fa-magnifying-glass"></i>
+                    </div>                   
+                </div>
+            
+                <div class = "box4">
+                    <i class = "fa-chisel fa-regular fa-flag"></i>
+                    <select class = "language">
+                        <option value = "en">EN</option>
+                        <option value = "hin">HIND</option>
+                    </select>
+                </div>
+                <div class = "box5">
+                    <p class = "hello">Hello! Sign in </p>
+                    <select name = "Accounts & Lists" class = "account" value = "Accounts & Lists">
+                        <option value = "Accounts"> Your Accounts</option>
+                        <option value = "orders">Your Orders</option>
+                    </select>
+                </div>
+                <div class = "box6">
+                    <p class = "return"> Returns </p>
+                    <p class = "order"> & Orders  </p>
+                </div>
+                <div class = "box7">
+                    <i class = "fa-solid fa-cart-arrow-down"></i>
+                </div>
+            </div>
+            <div class = "bar ">
+                <div class = "bar-all">
+                    <div>
+                        <i class = "fa-solid fa-list"></i>
+                    </div>
+                    <p>All</p>
+                </div> 
+                <div class = "panel">
+                    <p> Fresh</p>
+                    <p> MX Player</p>
+                    <p>Sell</p>
+                    <p> Bestsellers</p>
+                    <p>Today's Deals</p>
+                    <p> Mobiles </p>
+                    <p> Customer Services </p>
+                    <select name = "prime">
+                        <option value = "Prime">Prime</option>
+                    </select>
+                    <p> New Releases</p>
+                </div>
+                <div class = "panel-deals">
+                    Shop deals at Electronics
+                </div>        
+            </div>
+        </div>
+        
+    </header>
+    <div class = "picture">    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+css code 
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+
+}
+
+.nav-bot {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.navbar {
+    height: 60px;
+    background-color: #131921;
+    color: white;
+    display: flex;
+    padding : 0 16px;
+    align-items: center;
+    /* gap : 15px; */
+}
+
+.navbar-logo {
+    background-image: url("Capture.PNG");
+    height: 60px;
+    width: 140px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* font-size : 1rem; */
+
+}
+
+.border {
+    border: 2px solid transparent;
+}
+
+/* borderhover{
+    .border{}
+} */
+
+/* address font */
+/* .navbar-address {
+    color : #CCCC;
+    margin-left : 15px;
+    font-size : 12px;
+    display : flex;
+    flex-direction : column;
+} */
+
+
+.address-first {
+    font-size: 0.85rem;
+    margin-left: 15px;
+}
+
+.address-second {
+    font-family: arial;
+    font-size: 1rem;
+    margin-left: 3px;
+    color: #FFFF;
+    /* display : flex;
+    flex-direction : row; */
+}
+
+.add-icon {
+    display: flex;
+    align-items: center;
+    /* gap: 4px; */
+}
+
+/* box 3 */
+
+.nav-box {
+    display: flex;
+}
+
+.search-box {
+    display: flex;
+    flex : 1;
+
+
+    /* height : 100%;
+    width : 550px;*/
+    align-items: center;
+    /*overflow : hidden;
+    cursor : pointer;   */
+
+
+    /* border-radius : 20%;
+    border-style: inherit; */
+
+}
+
+.search-icon {
+    background-color: rgb(240, 193, 8);
+    height: 45px;
+    width: 40px;
+    font-size: 1rem;
+}
+
+.nav-select {
+    height: 45px;
+    width: 40px;
+    background-color: #E6E6E6;
+    margin-left: 30px;
+}
+
+.nav-search {
+    height: 45px;
+    width : 100%;
+    color: grey;
+}
+
+.box4 {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.language {
+    font-family: 'Times New Roman', Times, serif;
+    width: 3rem;
+    background-color: #131921;
+    color: white;
+}
+
+.box5 {
+    margin: 10px;
+}
+
+.account {
+    background-color: #131921;
+    font-family: arial;
+    color: white;
+    width: 10rem;
+    font-size: 1rem;
+    /* text-decoration-thickness: inherit; */
+}
+
+.hello {
+    font-size: 0.7rem;
+}
+
+.box6 {
+    margin-left: 10px;
+
+}
+
+.order {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.return {
+    margin-top: 10%;
+    font-size: 0.7rem;
+}
+
+.box7 {
+    margin-left: 10px;
+    align-items: center;
+    font-size: 2.5rem;
+    /* align-items : flex-end; */
+}
+
+.bar {
+    background-color: #161932;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 12p
+}
+
+.panel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+/* .panel p {
+    display : inline; 
+    
+    
+   
+} */
+
+.bar-all {
+    display: flex;
+    height: 40px;
+    align-items: center;
+
+}
+
+.panel-deals {
+    margin-left: 15px;
+}
+
+.picture {
+    background-image: url("../cap.PNG");
+    background-size: cover;
+
+    height: 500px;
+    width: 100%;
+
+    background-position: center;
+}
+
