@@ -46,7 +46,7 @@
 
 /* Search */
 .search-box {
-    flex: 1;                    /* 🔥 IMPORTANT */
+    flex: 1;                    /* takes up remaining space */
     display: flex;
     align-items: center;
 }
